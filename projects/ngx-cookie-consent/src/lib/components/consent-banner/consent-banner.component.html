@@ -1,0 +1,9 @@
+<div class="consent-banner" *ngIf="showBanner">
+  <p>
+    Usamos cookies para mejorar tu experiencia. Puedes aceptar todas o
+    personalizar tus preferencias.
+  </p>
+  <button (click)="acceptAll()">Aceptar todas</button>
+  <button (click)="rejectAll()">Rechazar todas</button>
+  <button (click)="openSettings()">Configuración</button>
+</div>

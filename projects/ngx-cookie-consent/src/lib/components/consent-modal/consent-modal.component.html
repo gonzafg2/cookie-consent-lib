@@ -1,0 +1,14 @@
+<div class="consent-modal">
+  <h2>Configuración de Cookies</h2>
+  <form (ngSubmit)="savePreferences()">
+    <div *ngFor="let category of categories">
+      <label>
+        <input type="checkbox" [disabled]="category.required" [(ngModel)]="userConsent[category.identifier]"
+          name="{{ category.identifier }}" />
+        {{ category.name }}
+      </label>
+      <p>{{ category.description }}</p>
+    </div>
+    <button type="submit">Guardar preferencias</button>
+  </form>
+</div>
